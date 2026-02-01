@@ -1,0 +1,4 @@
+Docs routing note:
+- Docs pages now resolve at /docs/[slug] (from content/docs/*.md).
+- The generic route /[section]/[slug] is still used for product and use-cases.
+- Avoid creating content/docs/* links as /docs/<slug> is canonical.
