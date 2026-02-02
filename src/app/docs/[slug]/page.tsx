@@ -6,7 +6,6 @@ import { notFound } from "next/navigation";
 type Params = { slug: string };
 
 export async function generateStaticParams() {
-  // docs slugs are derived from content/docs/*.md
   const { getDocsNav } = await import("@/lib/docs");
   return getDocsNav().map((d) => ({ slug: d.slug }));
 }
@@ -38,103 +37,72 @@ export default async function DocPage({ params }: { params: Promise<Params> }) {
   if (!page) return notFound();
 
   const { prev, next } = getPrevNext(slug);
-  // Last-updated (best effort) and edit link
+
+  // Last-updated (best effort)
   const rel = `content/docs/${slug}.md`;
   const lastIso = getGitLastUpdated(rel);
   const lastLabel = lastIso ? formatDateCH(lastIso) : null;
 
-  const repo = process.env.NEXT_PUBLIC_GITHUB_REPO;
-  const branch = process.env.NEXT_PUBLIC_GITHUB_BRANCH || "main";
-  const editUrl = repo ? `https://github.com/${repo}/edit/${branch}/content/docs/${slug}.md` : null;
-
   return (
-    <article style={{ maxWidth: 980, margin: "0 auto" }}>
-      {/* Breadcrumb + meta row */}
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          gap: 12,
-          flexWrap: "wrap",
-          marginBottom: 12,
-        }}
-      >
-        <div style={{ fontSize: 14, opacity: 0.75 }}>
-          <a href="/docs" style={{ textDecoration: "none" }}>Docs</a>
-          <span style={{ padding: "0 6px" }}>›</span>
-          <span>{page.title}</span>
-        </div>
+    <article className="pageContent">
+      <header className="pageHeader">
+        <p className="pageKicker">
+          <a href="/docs" className="link">Docs</a>
+          <span style={{ opacity: 0.6 }}> › </span>
+          {page.title}
+        </p>
 
-        <div style={{ display: "flex", gap: 12, fontSize: 13, opacity: 0.8 }}>
-          {lastLabel ? <span>Last updated: {lastLabel}</span> : null}
-          {editUrl ? (
-            <a href={editUrl} target="_blank" rel="noreferrer" style={{ textDecoration: "none" }}>
-              Edit this page
-            </a>
+        <div style={{ display: "flex", justifyContent: "space-between", gap: 12, flexWrap: "wrap" }}>
+          <h1 className="pageTitle">{page.title}</h1>
+          {lastLabel ? (
+            <div style={{ fontSize: 13, color: "var(--muted)", marginTop: 6 }}>
+              Zuletzt aktualisiert: {lastLabel}
+            </div>
           ) : null}
         </div>
-      </div>
 
-      <h1 style={{ marginTop: 0 }}>{page.title}</h1>
-      <p style={{ opacity: 0.75 }}>{page.description}</p>
+        {page.description ? <p className="pageLead">{page.description}</p> : null}
+      </header>
 
-      <div dangerouslySetInnerHTML={{ __html: page.html }} />
-
-      {/* Prev / Next */}
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr",
-          gap: 12,
-          marginTop: 32,
-          paddingTop: 18,
-          borderTop: "1px solid rgba(0,0,0,0.08)",
-        }}
-      >
-        <div>
-          {prev ? (
-            <a
-              href={`/docs/${prev.slug}`}
-              style={{
-                display: "block",
-                border: "1px solid rgba(0,0,0,0.08)",
-                borderRadius: 12,
-                padding: 14,
-                textDecoration: "none",
-              }}
-            >
-              <div style={{ fontSize: 12, opacity: 0.7, marginBottom: 6 }}>← Zurück</div>
-              <div style={{ fontWeight: 800 }}>{prev.title}</div>
-              <div style={{ fontSize: 13, opacity: 0.75, marginTop: 6 }}>{prev.description}</div>
-            </a>
-          ) : (
-            <div />
-          )}
+      <section className="section">
+        <div className="card">
+          <div className="prose" dangerouslySetInnerHTML={{ __html: page.html }} />
         </div>
+      </section>
 
-        <div>
-          {next ? (
-            <a
-              href={`/docs/${next.slug}`}
-              style={{
-                display: "block",
-                border: "1px solid rgba(0,0,0,0.08)",
-                borderRadius: 12,
-                padding: 14,
-                textDecoration: "none",
-                textAlign: "right",
-              }}
-            >
-              <div style={{ fontSize: 12, opacity: 0.7, marginBottom: 6 }}>Weiter →</div>
-              <div style={{ fontWeight: 800 }}>{next.title}</div>
-              <div style={{ fontSize: 13, opacity: 0.75, marginTop: 6 }}>{next.description}</div>
-            </a>
-          ) : (
-            <div />
-          )}
-        </div>
-      </div>
+      {(prev || next) && (
+        <section className="section">
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
+            <div>
+              {prev ? (
+                <a href={`/docs/${prev.slug}`} className="card" style={{ display: "block", textDecoration: "none" }}>
+                  <div style={{ fontSize: 12, color: "var(--muted)", marginBottom: 8 }}>← Zurück</div>
+                  <div style={{ fontWeight: 900 }}>{prev.title}</div>
+                  {prev.description ? (
+                    <div style={{ marginTop: 6, color: "var(--muted)" }}>{prev.description}</div>
+                  ) : null}
+                </a>
+              ) : (
+                <div />
+              )}
+            </div>
+
+            <div>
+              {next ? (
+                <a href={`/docs/${next.slug}`} className="card" style={{ display: "block", textDecoration: "none", textAlign: "right" }}>
+                  <div style={{ fontSize: 12, color: "var(--muted)", marginBottom: 8 }}>Weiter →</div>
+                  <div style={{ fontWeight: 900 }}>{next.title}</div>
+                  {next.description ? (
+                    <div style={{ marginTop: 6, color: "var(--muted)" }}>{next.description}</div>
+                  ) : null}
+                </a>
+              ) : (
+                <div />
+              )}
+            </div>
+          </div>
+        </section>
+      )}
     </article>
   );
 }

@@ -1,26 +1,35 @@
-import { getAllPagesMeta } from "@/lib/content";
+import Link from "next/link";
 
-export const metadata = {
-  title: "Docs – DigiEmu",
-  description: "Bedienanleitung und technische Dokumentation.",
-};
-
-export default function DocsIndexPage() {
-  const pages = getAllPagesMeta("docs");
-
+function CardItem({ title, desc, href }: { title: string; desc: string; href: string }) {
   return (
-    <div>
-      <h1>Docs</h1>
-      <p>Bedienanleitung und technische Hinweise zu DigiEmu.</p>
+    <Link href={href} className="card" style={{ display: "block" }}>
+      <div className="stack">
+        <p className="cardTitle" style={{ margin: 0 }}>{title}</p>
+        <p className="cardText">{desc}</p>
+      </div>
+    </Link>
+  );
+}
 
-      <ul style={{ listStyle: "none", padding: 0, display: "grid", gap: 12 }}>
-        {pages.map((p) => (
-          <li key={p.slug} style={{ border: "1px solid rgba(0,0,0,0.08)", borderRadius: 12, padding: 14 }}>
-            <a href={`/docs/${p.slug}`} style={{ fontWeight: 700, textDecoration: "none" }}>{p.title}</a>
-            <div style={{ opacity: 0.75, marginTop: 6 }}>{p.description}</div>
-          </li>
-        ))}
-      </ul>
-    </div>
+export default function DocsPage() {
+  return (
+    <>
+      <header className="pageHeader">
+        <p className="pageKicker">Docs</p>
+        <h1 className="pageTitle">Dokumentation</h1>
+        <p className="pageLead">Kapitelübersicht – tippe auf ein Kapitel, um Details zu öffnen.</p>
+      </header>
+
+      <section className="section">
+        <div className="stackLoose">
+          <CardItem title="Übersicht" desc="Was DigiEmu ist und wie die Module zusammenspielen." href="/docs/overview" />
+          <CardItem title="Schnellstart" desc="Erste Schritte mit DigiEmu." href="/docs/getting-started" />
+          <CardItem title="Rollen" desc="Vendor, Buyer, Admin – Rollenmodell." href="/docs/roles" />
+          <CardItem title="Vendor Onboarding" desc="Wie Verkäufer starten und ihr Profil einrichten." href="/docs/vendor-onboarding" />
+          <CardItem title="Produkt hochladen" desc="Produkt anlegen und Dateien hochladen." href="/docs/upload" />
+          <CardItem title="Checkout" desc="Was Käufer im Checkout erleben." href="/docs/checkout" />
+        </div>
+      </section>
+    </>
   );
 }

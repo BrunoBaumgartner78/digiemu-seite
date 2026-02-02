@@ -1,0 +1,22 @@
+{
+  "name": "DigiEmu",
+  "short_name": "DigiEmu",
+  "description": "Modulare Plattform für digitale Produkte – Marktplatz oder Lizenz-/Custom-Lösung.",
+  "start_url": "https://digiemu.ch/",
+  "scope": "https://digiemu.ch/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

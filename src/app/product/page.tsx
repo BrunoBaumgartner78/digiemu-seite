@@ -1,26 +1,35 @@
-import { getAllPagesMeta } from "@/lib/content";
+import Link from "next/link";
 
-export const metadata = {
-  title: "Produkt – DigiEmu",
-  description: "Produktbeschreibung, Funktionen und Betriebsmodi.",
-};
-
-export default function ProductIndexPage() {
-  const pages = getAllPagesMeta("product");
-
+function CardItem({ title, desc, href }: { title: string; desc: string; href: string }) {
   return (
-    <div>
-      <h1>Produkt</h1>
-      <p>Übersicht über Funktionen, Betriebsmodi und Grundlagen von DigiEmu.</p>
+    <Link href={href} className="card" style={{ display: "block" }}>
+      <div className="stack">
+        <p className="cardTitle" style={{ margin: 0 }}>{title}</p>
+        <p className="cardText">{desc}</p>
+      </div>
+    </Link>
+  );
+}
 
-      <ul style={{ listStyle: "none", padding: 0, display: "grid", gap: 12 }}>
-        {pages.map((p) => (
-          <li key={p.url} style={{ border: "1px solid rgba(0,0,0,0.08)", borderRadius: 12, padding: 14 }}>
-            <a href={p.url} style={{ fontWeight: 700, textDecoration: "none" }}>{p.title}</a>
-            <div style={{ opacity: 0.75, marginTop: 6 }}>{p.description}</div>
-          </li>
-        ))}
-      </ul>
-    </div>
+export default function ProductPage() {
+  return (
+    <>
+      <header className="pageHeader">
+        <p className="pageKicker">Produkt</p>
+        <h1 className="pageTitle">Überblick über DigiEmu</h1>
+        <p className="pageLead">Funktionen, Betriebsmodi und Grundlagen – kompakt zur Einordnung.</p>
+      </header>
+
+      <section className="section">
+        <div className="stackLoose">
+          <CardItem title="Produktübersicht" desc="Überblick über DigiEmu als Informationsinfrastruktur." href="/product/overview" />
+          <CardItem title="Lizenzmodell" desc="Lizenzierung für Gemeinden und Institutionen." href="/product/licensing" />
+          <CardItem title="Technische Kurzbeschreibung" desc="Architektur, Betrieb, Datenschutz – kompakt für IT & Projektleitung." href="/product/technical" />
+          <CardItem title="Custom Setup" desc="Individuelle Einrichtung, Branding und Betrieb." href="/product/custom" />
+          <CardItem title="Admin & Reports" desc="Admin-Funktionen, CSV-Export und Auswertungen." href="/product/admin" />
+          <CardItem title="Datenschutz" desc="Datenverarbeitung (CH/EU), Prinzipien und Umsetzung." href="/product/privacy" />
+        </div>
+      </section>
+    </>
   );
 }

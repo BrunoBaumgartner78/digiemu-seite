@@ -1,26 +1,35 @@
-import { getAllPagesMeta } from "@/lib/content";
+import Link from "next/link";
 
-export const metadata = {
-  title: "Use-Cases – DigiEmu",
-  description: "Einsatzszenarien für Creator, Organisationen und Gemeinden.",
-};
-
-export default function UseCasesIndexPage() {
-  const pages = getAllPagesMeta("use-cases");
-
+function CardItem({ title, desc, href }: { title: string; desc: string; href: string }) {
   return (
-    <div>
-      <h1>Use-Cases</h1>
-      <p>Einsatzszenarien für DigiEmu – von Creator bis Gemeinde.</p>
+    <Link href={href} className="card" style={{ display: "block" }}>
+      <div className="stack">
+        <p className="cardTitle" style={{ margin: 0 }}>{title}</p>
+        <p className="cardText">{desc}</p>
+      </div>
+    </Link>
+  );
+}
 
-      <ul style={{ listStyle: "none", padding: 0, display: "grid", gap: 12 }}>
-        {pages.map((p) => (
-          <li key={p.url} style={{ border: "1px solid rgba(0,0,0,0.08)", borderRadius: 12, padding: 14 }}>
-            <a href={p.url} style={{ fontWeight: 700, textDecoration: "none" }}>{p.title}</a>
-            <div style={{ opacity: 0.75, marginTop: 6 }}>{p.description}</div>
-          </li>
-        ))}
-      </ul>
-    </div>
+export default function UseCasesPage() {
+  return (
+    <>
+      <header className="pageHeader">
+        <p className="pageKicker">Use-Cases</p>
+        <h1 className="pageTitle">Einsatzszenarien für DigiEmu</h1>
+        <p className="pageLead">Von Creator bis Gemeinde – klare Szenarien, gleiche Infrastruktur.</p>
+      </header>
+
+      <section className="section">
+        <div className="stackLoose">
+          <CardItem title="Pilotprojekt DigiEmu für Gemeinden" desc="Risikoarmer Testbetrieb zur Prüfung einer langfristigen Informationsinfrastruktur." href="/use-cases/pilot" />
+          <CardItem title="Bildung" desc="Digitale Inhalte für Schulen, Kurse und Weiterbildung." href="/use-cases/education" />
+          <CardItem title="Creator" desc="Direkter Verkauf digitaler Produkte für Creator und Autoren." href="/use-cases/creator" />
+          <CardItem title="Events" desc="Digitale Inhalte und Materialien für Events." href="/use-cases/events" />
+          <CardItem title="Gemeinden" desc="Informationsinfrastruktur für Gemeinden und Behörden." href="/use-cases/municipalities" />
+          <CardItem title="Organisationen" desc="Digitale Inhalte kontrolliert bereitstellen (NGOs/Organisationen)." href="/use-cases/organizations" />
+        </div>
+      </section>
+    </>
   );
 }

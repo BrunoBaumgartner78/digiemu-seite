@@ -3,6 +3,7 @@ import path from "path";
 import matter from "gray-matter";
 import { remark } from "remark";
 import html from "remark-html";
+import { autoLinkGlossary } from "@/lib/glossaryAutolink";
 
 const CONTENT_DIR = path.join(process.cwd(), "content");
 
@@ -113,13 +114,13 @@ export async function getPage(section: string, slug: string): Promise<ContentPag
 		order = Number(orderRaw);
 	}
 
-	return {
+		return {
 		section,
 		slug,
 		title,
 		description,
 		order,
-		html: htmlString,
+			html: autoLinkGlossary(htmlString),
 		url: `/${section}/${slug}`,
 	};
 }
