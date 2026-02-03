@@ -50,7 +50,7 @@ Merkmale:
 
 Es ist keine eigene Infrastruktur erforderlich.
 
-→ **/marketplace-mode**
+→ [Marktplatz-Modus](/product/marketplace)
 
 ---
 
@@ -75,8 +75,8 @@ Creator legen ihre Produktpreise selbst fest.
 - keine Mindestumsätze  
 - Gebühren werden transparent ausgewiesen  
 
-→ **/prices**  
-→ **/payments**
+→ [Preise & Gebühren](/product/pricing)  
+→ [Zahlungen](/product/payments)
 
 ---
 
@@ -117,5 +117,5 @@ Es ist eine **funktionale Verkaufs- und Bereitstellungsinfrastruktur** für digi
 - [Produktüberblick](/product/overview)
 - [Checkout](/docs/checkout)
 - [Downloads](/product/downloads)
-- [FAQ](/faq)
+- [FAQ](/faq/municipalities)
 - [Glossar](/glossary)

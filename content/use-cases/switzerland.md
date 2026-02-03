@@ -46,8 +46,8 @@ DigiEmu berücksichtigt:
 - minimale Datenverarbeitung  
 - klare Zuständigkeiten  
 
-→ **/datenschutz**  
-→ **/security**
+→ [Datenschutz](/legal/datenschutz)  
+→ [Sicherheit](/product/security)
 
 ---
 
@@ -78,8 +78,8 @@ Viele Schweizer Organisationen legen Wert auf:
 
 DigiEmu ermöglicht eigenständige Instanzen und klare Verantwortlichkeiten.
 
-→ **/product/licensing**  
-→ **/product/custom**
+→ [Lizenz/Custom](/product/licensing)  
+→ [Custom](/product/custom)
 
 ---
 
@@ -93,9 +93,9 @@ DigiEmu eignet sich u. a. für:
 - Unternehmen mit langfristigen Inhalten  
 - unabhängige Creator und Autorinnen  
 
-→ **/use-cases/municipalities**  
-→ **/use-cases/education**  
-→ **/use-cases/organizations**
+→ [Für Gemeinden](/use-cases/municipalities)  
+→ [Bildung](/use-cases/education)  
+→ [Organisationen](/use-cases/organizations)
 
 ---
 
@@ -110,8 +110,8 @@ DigiEmu ist kompatibel mit:
 
 Dies entspricht gängigen Vorgehensweisen in der Schweiz.
 
-→ **/use-cases/pilot**  
-→ **/roadmap**
+→ [Pilotprojekt](/use-cases/pilot)  
+→ [Roadmap](/roadmap)
 
 ---
 
@@ -128,5 +128,5 @@ Es ist eine **ruhige, verlässliche digitale Infrastruktur**, die gut zu den org
 - [Produktüberblick](/product/overview)
 - [Für Gemeinden](/municipalities)
 - [Vergleich](/comparison)
-- [FAQ](/faq)
+- [FAQ](/faq/municipalities)
 - [Glossar](/glossary)

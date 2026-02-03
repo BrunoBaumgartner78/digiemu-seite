@@ -47,15 +47,15 @@ Für Events kommen in der Regel zwei Betriebsformen infrage:
 - standardisierter Checkout  
 - kontrollierte Downloads  
 
-→ **/marketplace-mode**
+→ [Marktplatz-Modus](/product/marketplace)
 
 ### Lizenz- oder Custom-Modus
 - eigene Event-Instanz oder Event-Bereich  
 - definierte Zugriffsregeln  
 - klare Trennung von anderen Inhalten  
 
-→ **/product/licensing**  
-→ **/product/custom**
+→ [Lizenz/Custom](/product/licensing)  
+→ [Custom](/product/custom)
 
 ---
 
@@ -79,8 +79,8 @@ Für kostenpflichtige Events oder Materialien:
 - transparente Preisdefinition  
 - eindeutige Zuordnung zu Bestellungen  
 
-→ **/payments**  
-→ **/checkout**
+→ [Zahlungen](/product/payments)  
+→ [Checkout](/product/payments)
 
 ---
 
@@ -123,5 +123,5 @@ DigiEmu eignet sich besonders für Events, bei denen:
 - [Produktüberblick](/product/overview)
 - [Downloads](/product/downloads)
 - [Sicherheit](/product/security)
-- [FAQ](/faq)
+- [FAQ](/faq/municipalities)
 - [Glossar](/glossary)

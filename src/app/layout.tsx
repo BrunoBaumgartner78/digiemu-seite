@@ -170,18 +170,20 @@ export default function RootLayout({
         </main>
 
         {/* Footer */}
-        <footer className="container footer">
-          <div className="footerRow">
-            <span>
-              © {new Date().getFullYear()} DigiEmu • Bellu – Baumgartner Web Design
-              & Development
-            </span>
-            <span className="dot">•</span>
-            <a href="/legal/impressum">Impressum</a>
-            <a href="/legal/datenschutz">Datenschutz</a>
-            <a href="/legal/agb">AGB</a>
-          </div>
-        </footer>
+            <footer className="container footer">
+      <div className="footerRow">
+        <span>
+          © {new Date().getFullYear()} DigiEmu • Bellu – Baumgartner Web Design & Development
+        </span>
+        <span className="dot">•</span>
+        <a href="/about">Über</a>
+        <a href="/comparison">Vergleich</a>
+        <a href="/legal/impressum">Impressum</a>
+        <a href="/legal/datenschutz">Datenschutz</a>
+        <a href="/legal/agb">AGB</a>
+      </div>
+    </footer>
+
       </body>
     </html>
   );

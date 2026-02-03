@@ -49,7 +49,7 @@ Merkmale:
 - standardisierter Checkout  
 - kontrollierte Downloads  
 
-→ **/marketplace-mode**
+→ [Marktplatz-Modus](/product/marketplace)
 
 ---
 
@@ -86,8 +86,8 @@ Für den Verkauf von Templates gelten:
 - eindeutige Preisangabe  
 - nachvollziehbare Bestellungen  
 
-→ **/payments**  
-→ **/checkout**
+→ [Zahlungen](/product/payments)  
+→ [Checkout](/product/payments)
 
 ---
 

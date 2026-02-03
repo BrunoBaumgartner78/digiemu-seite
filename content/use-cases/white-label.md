@@ -45,7 +45,7 @@ Der White-Label-Modus unterscheidet sich klar vom Marktplatz-Betrieb:
 
 Es findet keine Vermischung von Inhalten oder Marken statt.
 
-→ **/marketplace-mode**
+→ [Marktplatz-Modus](/product/marketplace)
 
 ---
 
@@ -82,8 +82,8 @@ White-Label-Instanzen basieren in der Regel auf:
 - einem **Lizenzmodell** für den laufenden Betrieb  
 - einem **Custom Setup** für die initiale Einrichtung  
 
-→ **/product/licensing**  
-→ **/product/custom**
+→ [Lizenz/Custom](/product/licensing)  
+→ [Custom](/product/custom)
 
 ---
 
@@ -95,8 +95,8 @@ White-Label-Instanzen erfüllen dieselben Grundsätze wie DigiEmu insgesamt:
 - klare Zugriffskontrolle  
 - nachvollziehbare Prozesse  
 
-→ **/datenschutz**  
-→ **/security**
+→ [Datenschutz](/legal/datenschutz)  
+→ [Sicherheit](/product/security)
 
 ---
 

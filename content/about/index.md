@@ -81,7 +81,7 @@ Stattdessen versteht sich DigiEmu als **digitale Infrastruktur**, die ruhig, nac
 
 ## Weiterführende Informationen
 
-→ **/municipalities**  
-→ **/comparison**  
-→ **/faq/municipalities**  
-→ **/glossary**
+- [Gemeinden](/municipalities)  
+- [Vergleich](/comparison)  
+- [FAQ für Gemeinden](/faq/municipalities)  
+- [Glossar](/glossary)

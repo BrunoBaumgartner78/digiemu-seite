@@ -49,15 +49,15 @@ Für Organisationen sind zwei Betriebsformen besonders geeignet:
 - definierte Rollen und Zugriffe  
 - langfristiger, stabiler Betrieb  
 
-→ **/product/licensing**  
-→ **/product/custom**
+→ [Lizenz/Custom](/product/licensing)  
+→ [Custom](/product/custom)
 
 ### Marktplatz-Modus (optional)
 - Verkauf von Publikationen oder Materialien  
 - standardisierter Checkout  
 - kontrollierte Downloads  
 
-→ **/marketplace-mode**
+→ [Marktplatz-Modus](/product/marketplace)
 
 ---
 
@@ -71,7 +71,7 @@ DigiEmu ermöglicht eine klare Rollenverteilung, z. B.:
 
 Zugriffe können differenziert vergeben und bei Bedarf entzogen werden.
 
-→ **/roles**
+→ [Rollen](/docs/roles)
 
 ---
 
@@ -97,8 +97,8 @@ DigiEmu berücksichtigt die Anforderungen von Organisationen an:
 - kontrollierte Zugriffe  
 - verantwortungsvollen Umgang mit sensiblen Informationen  
 
-→ **/datenschutz**  
-→ **/security**
+→ [Datenschutz](/legal/datenschutz)  
+→ [Sicherheit](/product/security)
 
 ---
 
@@ -143,5 +143,5 @@ DigiEmu unterstützt Organisationen dabei, digitale Inhalte **geordnet, verantwo
 - [Produktüberblick](/product/overview)
 - [Preise & Gebühren](/product/pricing)
 - [Sicherheit](/product/security)
-- [FAQ](/faq)
+- [FAQ](/faq/municipalities)
 - [Glossar](/glossary)

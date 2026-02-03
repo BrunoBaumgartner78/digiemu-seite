@@ -48,15 +48,15 @@ Für Unternehmen sind zwei Betriebsformen relevant:
 - definierte Rollen und Zugriffe  
 - langfristiger Betrieb  
 
-→ **/product/licensing**  
-→ **/product/custom**
+→ [Lizenz/Custom](/product/licensing)  
+→ [Custom](/product/custom)
 
 ### Marktplatz-Modus (optional)
 - Verkauf digitaler Inhalte  
 - standardisierter Checkout  
 - kontrollierte Downloads  
 
-→ **/marketplace-mode**
+→ [Marktplatz-Modus](/product/marketplace)
 
 ---
 
@@ -70,7 +70,7 @@ DigiEmu unterstützt ein klares Rollenmodell, z. B.:
 
 Zugriffe können fein abgestimmt und bei Bedarf entzogen werden.
 
-→ **/roles**
+→ [Rollen](/docs/roles)
 
 ---
 
@@ -95,8 +95,8 @@ Für Unternehmen besonders relevant sind:
 - strukturierte Berechtigungen  
 - klare Verantwortlichkeiten  
 
-→ **/security**  
-→ **/downloads**
+→ [Sicherheit](/product/security)  
+→ [Downloads](/product/downloads)
 
 ---
 
@@ -139,5 +139,5 @@ Für Unternehmen ist DigiEmu besonders geeignet, wenn:
 - [Produktüberblick](/product/overview)
 - [Preise & Gebühren](/product/pricing)
 - [Sicherheit](/product/security)
-- [FAQ](/faq)
+- [FAQ](/faq/municipalities)
 - [Glossar](/glossary)

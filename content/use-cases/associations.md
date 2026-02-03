@@ -47,8 +47,8 @@ Vereine können DigiEmu in unterschiedlichen Formen nutzen:
 
 Die Wahl des Modus hängt vom Einsatzzweck ab.
 
-→ **/marketplace-mode**  
-→ **/product/licensing**
+→ [Marktplatz-Modus](/product/marketplace)  
+→ [Lizenz/Custom](/product/licensing)
 
 ---
 
@@ -62,7 +62,7 @@ DigiEmu ermöglicht eine klare Trennung von Rollen:
 
 Zugriffe können angepasst und bei Austritt einfach entzogen werden.
 
-→ **/roles**
+→ [Rollen](/docs/roles)
 
 ---
 
@@ -76,8 +76,8 @@ Für kostenpflichtige Inhalte oder Kurse:
 
 Einnahmen und Zugriffe bleiben nachvollziehbar.
 
-→ **/checkout**  
-→ **/downloads**
+→ [Checkout](/product/payments)  
+→ [Downloads](/product/downloads)
 
 ---
 
@@ -107,5 +107,5 @@ Es dient als **stabile Inhalts- und Produktinfrastruktur**, die bestehende Ablä
 - [Preise & Gebühren](/product/pricing)
 - [Sicherheit](/product/security)
 - [Downloads](/product/downloads)
-- [FAQ](/faq)
+- [FAQ](/faq/municipalities)
 - [Glossar](/glossary)

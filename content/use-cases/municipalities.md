@@ -51,9 +51,9 @@ Merkmale:
 
 Je nach Ausgangslage kann ein **Pilotprojekt** vorgeschaltet werden.
 
-→ **/product/licensing**  
-→ **/product/custom**  
-→ **/use-cases/pilot**
+→ [Lizenz/Custom](/product/licensing)  
+→ [Custom](/product/custom)  
+→ [Pilotprojekt](/use-cases/pilot)
 
 ---
 
@@ -67,7 +67,7 @@ DigiEmu unterstützt ein klares Rollenmodell, z. B.:
 
 Zugriffe sind rollenbasiert geregelt und nachvollziehbar.
 
-→ **/roles**
+→ [Rollen](/docs/roles)
 
 ---
 
@@ -94,8 +94,8 @@ Für Gemeinden besonders relevant:
 - kontrollierte Zugriffe  
 - nachvollziehbare Prozesse  
 
-→ **/datenschutz**  
-→ **/security**
+→ [Datenschutz](/legal/datenschutz)  
+→ [Sicherheit](/product/security)
 
 ---
 
@@ -141,7 +141,7 @@ DigiEmu unterstützt Gemeinden dabei, digitale Informationen **verantwortungsvol
 - [Preise & Gebühren](/product/pricing)
 - [Sicherheit](/product/security)
 - [Downloads](/product/downloads)
-- [FAQ](/faq)
+- [FAQ](/faq/municipalities)
 - [Glossar](/glossary)
 - [Für Gemeinden](/municipalities)
 - [Pilotprojekt](/use-cases/pilot)

@@ -49,15 +49,15 @@ Für Bildungseinrichtungen sind zwei Betriebsformen üblich:
 - langfristiger Betrieb  
 - strukturierte Inhaltsbereiche  
 
-→ **/product/licensing**  
-→ **/product/custom**
+→ [Lizenz/Custom](/product/licensing)  
+→ [Custom](/product/custom)
 
 ### Marktplatz-Modus
 - Verkauf einzelner Kurse oder Materialien  
 - standardisierter Checkout  
 - zentrale Abwicklung  
 
-→ **/marketplace-mode**
+→ [Marktplatz-Modus](/product/marketplace)
 
 ---
 
@@ -71,7 +71,7 @@ DigiEmu unterstützt ein klares Rollenmodell:
 
 Zugriffe können zeitlich oder inhaltlich eingeschränkt werden (z. B. Kursdauer).
 
-→ **/roles**
+→ [Rollen](/docs/roles)
 
 ---
 
@@ -83,8 +83,8 @@ Für kostenpflichtige Angebote:
 - klare Preisdefinition  
 - kontrollierte Bereitstellung von Materialien  
 
-→ **/payments**  
-→ **/downloads**
+→ [Zahlungen](/product/payments)  
+→ [Downloads](/product/downloads)
 
 ---
 
@@ -126,6 +126,6 @@ Für Bildungseinrichtungen ist DigiEmu besonders geeignet, wenn:
 
 - [Produktüberblick](/product/overview)
 - [Preise & Gebühren](/product/pricing)
-- [FAQ](/faq)
+- [FAQ](/faq/municipalities)
 - [Sicherheit](/product/security)
 - [Glossar](/glossary)

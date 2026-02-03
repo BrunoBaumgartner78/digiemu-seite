@@ -24,7 +24,7 @@ export default function ProductPage() {
         <div className="stackLoose">
           <CardItem title="Produktübersicht" desc="Überblick über DigiEmu als Informationsinfrastruktur." href="/product/overview" />
           <CardItem title="Lizenzmodell" desc="Lizenzierung für Gemeinden und Institutionen." href="/product/licensing" />
-          <CardItem title="Technische Kurzbeschreibung" desc="Architektur, Betrieb, Datenschutz – kompakt für IT & Projektleitung." href="/product/technical" />
+          <CardItem title="Technische Kurzbeschreibung" desc="Architektur, Betrieb, Datenschutz – kompakt für IT & Projektleitung." href="/product/technical-overview" />
           <CardItem title="Custom Setup" desc="Individuelle Einrichtung, Branding und Betrieb." href="/product/custom" />
           <CardItem title="Admin & Reports" desc="Admin-Funktionen, CSV-Export und Auswertungen." href="/product/admin" />
           <CardItem title="Datenschutz" desc="Datenverarbeitung (CH/EU), Prinzipien und Umsetzung." href="/product/privacy" />
