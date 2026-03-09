@@ -26,7 +26,7 @@ export default function ContactMunicipalitiesPage() {
 
       <h2>Kontakt</h2>
       <p>
-        <strong>E-Mail:</strong> <a href="mailto:bruno@brainbloom.ch">bruno@brainbloom.ch</a>
+        <strong>E-Mail:</strong> <a href="mailto:bruno_baumgartner@baumgarter-development.ch">bruno_baumgartner@baumgarter-development.ch</a>
         <br />
         Bitte nennen Sie Gemeinde/Organisation, Kontaktperson und Fragestellung.
       </p>
