@@ -6,13 +6,16 @@ import html from "remark-html";
 
 const CONTENT_DIR = path.join(process.cwd(), "content");
 
-export type ContentPage = {
+export type PageMeta = {
   section: string;
   slug: string;
   title: string;
   description: string;
-  html: string;
   url: string;
+};
+
+export type ContentPage = PageMeta & {
+  html: string;
 };
 
 export function getAllSlugs(): { section: string; slug: string }[] {
@@ -28,6 +31,7 @@ export function getAllSlugs(): { section: string; slug: string }[] {
   for (const section of sections) {
     const dir = path.join(CONTENT_DIR, section);
     const files = fs.readdirSync(dir).filter((f) => f.endsWith(".md"));
+
     for (const f of files) {
       result.push({ section, slug: f.replace(/\.md$/, "") });
     }
@@ -36,7 +40,56 @@ export function getAllSlugs(): { section: string; slug: string }[] {
   return result;
 }
 
-export async function getPage(section: string, slug: string): Promise<ContentPage | null> {
+export function getAllPagesMeta(section?: string): PageMeta[] {
+  if (!fs.existsSync(CONTENT_DIR)) return [];
+
+  const sections = section
+    ? [section]
+    : fs
+        .readdirSync(CONTENT_DIR, { withFileTypes: true })
+        .filter((d) => d.isDirectory())
+        .map((d) => d.name);
+
+  const result: PageMeta[] = [];
+
+  for (const currentSection of sections) {
+    const dir = path.join(CONTENT_DIR, currentSection);
+    if (!fs.existsSync(dir)) continue;
+
+    const files = fs.readdirSync(dir).filter((f) => f.endsWith(".md"));
+
+    for (const file of files) {
+      const slug = file.replace(/\.md$/, "");
+      const filePath = path.join(dir, file);
+      const raw = fs.readFileSync(filePath, "utf8");
+      const { data } = matter(raw);
+
+      const title = String(data.title ?? "");
+      const description = String(data.description ?? "");
+
+      if (!title || !description) {
+        throw new Error(
+          `Missing frontmatter title/description in ${currentSection}/${slug}.md`
+        );
+      }
+
+      result.push({
+        section: currentSection,
+        slug,
+        title,
+        description,
+        url: `/${currentSection}/${slug}`,
+      });
+    }
+  }
+
+  return result;
+}
+
+export async function getPage(
+  section: string,
+  slug: string
+): Promise<ContentPage | null> {
   const filePath = path.join(CONTENT_DIR, section, `${slug}.md`);
   if (!fs.existsSync(filePath)) return null;
 
@@ -50,7 +103,9 @@ export async function getPage(section: string, slug: string): Promise<ContentPag
   const description = String(data.description ?? "");
 
   if (!title || !description) {
-    throw new Error(`Missing frontmatter title/description in ${section}/${slug}.md`);
+    throw new Error(
+      `Missing frontmatter title/description in ${section}/${slug}.md`
+    );
   }
 
   return {
